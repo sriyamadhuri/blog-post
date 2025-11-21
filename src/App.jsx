@@ -8,8 +8,8 @@ import LoginPage from "./pages/LoginPage";
 import BlogPostsPage from "./pages/BlogPostsPage";
 import IndividualPostPage from "./pages/IndividualPostPage";
 import ContactPage from "./pages/ContactPage";
+import { AuthProvider } from "./context/authContext.jsx";
 
-import { useAuth } from "./context/AuthContext";
 import "./styles/App.css";
 
 function ProtectedRoute({ children }) {
