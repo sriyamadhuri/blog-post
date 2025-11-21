@@ -1,0 +1,55 @@
+
+:root {
+  --color-bg: #e2e2ef;
+  --color-surface: #56708a;
+  --color-text: #081a33;
+  --color-card: #ffffff;
+  --color-border: #e5e7eb;
+  --color-muted: #6b7280;
+  --color-accent: #0F9D8A;
+  --color-accent-hover: #0c7d6e;
+}
+
+body.dark {
+  --color-bg: #001935;       
+  --color-surface: #0A2342;  
+  --color-text: #E6EDF3;     
+  --color-card: #1B3B5F;     
+  --color-border: #224a73;
+  --color-muted: #9db4cc;
+  --color-accent: #0F9D8A;   
+  --color-accent-hover: #0c7d6e;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+* {
+  transition: background-color 0.25s ease,
+              color 0.25s ease,
+              border-color 0.25s ease;
+}
+
+.app, main {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.theme-btn {
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  padding: 0.45rem 0.9rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.theme-btn:hover {
+  background-color: var(--color-accent-hover);
+}

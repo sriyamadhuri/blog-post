@@ -1,0 +1,52 @@
+/* FULL-WIDTH NAVBAR WITH EVEN SPACING FOR 2 ITEMS */
+.navbar {
+  background-color: #003366; /* Always Blue */
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Spread items across width */
+  align-items: center;
+  padding: 0.8rem 1rem;
+  gap: 1rem;
+}
+
+/* Allow both items to stretch evenly */
+.navbar > * {
+  flex: 1;
+  text-align: center;
+}
+
+/* Contact link styling */
+.navbar a {
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  transition: 0.25s;
+}
+
+.navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.navbar a.active {
+  background-color: rgba(255, 255, 255, 0.4);
+  font-weight: bold;
+}
+
+/* Theme Toggle Button styled as nav item */
+.theme-btn {
+  background-color: #ffcc00;
+  color: #003366;
+  border: none;
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.theme-btn:hover {
+  background-color: #ffdb4d;
+}

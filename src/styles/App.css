@@ -1,0 +1,129 @@
+/* ===========================
+   APP LAYOUT (THEME READY)
+   =========================== */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  padding: 1rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Navbar container spacing */
+.navbar {
+  margin-top: 0.5rem;
+}
+
+/* Main layout */
+.main-content {
+  flex: 1;
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* Blog Post Card */
+.blog-post {
+  background-color: var(--color-card);
+  color: var(--color-text);
+  margin: 1.5rem 0;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  border: 1px solid var(--color-border);
+}
+
+.blog-post h2 {
+  margin-top: 0;
+}
+
+.blog-post p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Meta text */
+.meta {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* Comment Section */
+.comment-section {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+/* Comment Textarea */
+.comment-section textarea {
+  width: 100%;
+  height: 60px;
+  margin-top: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+  padding: 0.5rem;
+  background-color: var(--color-card);
+  color: var(--color-text);
+}
+
+/* Comment Button */
+.comment-section button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.comment-section button:hover {
+  background-color: var(--color-accent-hover);
+}
+
+/* Individual Comment */
+.comment {
+  background-color: var(--color-surface);
+  border-radius: 6px;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  color: var(--color-text);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto;
+  border-top: 1px solid var(--color-border);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .blog-post {
+    width: 100%;
+    padding: 1.2rem;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+}

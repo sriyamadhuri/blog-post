@@ -1,0 +1,43 @@
+.comment-box {
+  margin-top: 1.5rem;
+}
+
+.comment-box h4 {
+  margin-bottom: 0.5rem;
+}
+
+.comment-box ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.comment-box li {
+  background: #f0f0f0;
+  margin-bottom: 0.4rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.comment-box form {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.comment-box input {
+  flex: 1;
+  padding: 0.5rem;
+}
+
+.comment-box button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.comment-box button:hover {
+  background-color: #357ab8;
+}

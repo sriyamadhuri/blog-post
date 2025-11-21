@@ -1,0 +1,50 @@
+/* Full page centering */
+.home-container {
+  min-height: calc(100vh - 160px); 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Big title */
+.home-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* Description text */
+.home-description {
+  font-size: 1.2rem;
+  max-width: 500px;
+  color: #cbd5e1;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+/* Big login button */
+.home-login-btn {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.9rem 2.2rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+.home-login-btn:hover {
+  background-color: #1e4ed8;
+}
+
+/* Logged-in text */
+.home-user {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  color: #22c55e;
+}

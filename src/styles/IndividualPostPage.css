@@ -1,0 +1,133 @@
+.post-detail {
+  padding: 3rem 1rem;
+  min-height: 90vh;
+  background: linear-gradient(135deg, #0a1128, #001f54);
+  color: #f8f9fa;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.back-link {
+  text-decoration: none;
+  color: #9ecaff;
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+h2 {
+  color: #9ecaff;
+  margin-bottom: 1rem;
+}
+.content {
+  line-height: 1.7;
+  color: #d1d5db;
+  margin-bottom: 1rem;
+}
+.author-info {
+  background-color: #ffffff15;
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid #2a3b7a;
+  margin-top: 2rem;
+}
+.author-info h3 {
+  color: #9ecaff;
+  margin-bottom: 0.5rem;
+}
+.comments-section {
+  margin-top: 2rem;
+  background-color: #ffffff15;
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid #2a3b7a;
+}
+.comments-section h3 {
+  color: #9ecaff;
+  margin-bottom: 1rem;
+}
+
+.comments-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.comment-item {
+  background-color: #1b2a64;
+  border-radius: 8px;
+  padding: 0.8rem;
+  margin-bottom: 0.6rem;
+  color: #f8f9fa;
+}
+
+.comment-item strong {
+  display: block;
+  color: #9ecaff;
+  margin-bottom: 0.3rem;
+}
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.comment-form input,
+.comment-form textarea {
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #ccd6f6;
+  background-color: #f9fafb;
+  font-size: 1rem;
+  color: #111;
+}
+
+.comment-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.comment-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.7rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.comment-form button:hover {
+  background-color: #0056b3;
+}
+.spinner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  color: #f8f9fa;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #ccc;
+  border-top-color: #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

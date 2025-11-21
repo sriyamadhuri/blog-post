@@ -1,0 +1,159 @@
+/* === BLOG POSTS PAGE STYLES === */
+
+/* Main Section */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
+  min-height: 100vh;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* ✅ Title Header (same color in both themes) */
+.page-header {
+  width: 100%;
+  background-color: #0a1128; /* fixed dark navy */
+  color: #ffffff;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+/* ✅ Light Mode (no dark background) */
+.light section {
+  background-color: #e8eaf6; /* light soft background */
+}
+
+/* ✅ Dark Mode (bring back dark gradient) */
+.dark section {
+  background: linear-gradient(135deg, #0a1128, #001f54);
+}
+
+/* Heading inside the section */
+h1 {
+  text-transform: uppercase;
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #01081c;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.dark h1 {
+  color: #ffffff;
+}
+
+/* Post List */
+.posts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 800px;
+  width: 100%;
+}
+
+/* Post Card */
+.post-card {
+  background-color: #f0f2fa; /* light neutral */
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  text-align: left;
+  color: #0a0a0a;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* Post Title */
+.post-card h3 a {
+  color: #1e3a8a;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.post-card h3 a:hover {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+/* Post Paragraphs */
+.post-card p {
+  color: #1f2937;
+  line-height: 1.6;
+  margin-top: 0.5rem;
+}
+
+/* Read More Link */
+.read-more {
+  display: inline-block;
+  margin-top: 0.8rem;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.read-more:hover {
+  color: #60a5fa;
+  text-shadow: 0px 0px 6px #60a5fa;
+}
+
+/* Spinner Loader */
+.spinner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  color: #f8f9fa;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #ccc;
+  border-top-color: #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ✅ Dark Mode Styling */
+.dark .post-card {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+.dark .post-card h3 a {
+  color: #93c5fd;
+}
+
+.dark .post-card p {
+  color: #e5e7eb;
+}
+
+.dark .read-more {
+  color: #60a5fa;
+}
+
+.dark .read-more:hover {
+  color: #93c5fd;
+  text-shadow: 0px 0px 6px #93c5fd;
+}
