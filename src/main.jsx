@@ -7,7 +7,7 @@ import { ThemeProvider } from "./context/ThemeContext";
 import { AuthProvider } from "./context/authContext.jsx";
 
 import "./index.css";
-import "./styles/theme.css";
+import "./styles/Theme.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
