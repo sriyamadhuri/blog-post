@@ -1,89 +1,46 @@
 .navbar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  background: var(--bg-secondary);
-  padding: 12px 20px;
-  border-bottom: 1px solid var(--border-color);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  align-items: center;
+  padding: 12px 30px;
+  background: #0b1f38;
+  color: white;
+  font-size: 16px;
 }
 
-/* Left side links */
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Nav links */
 .navbar a {
-  margin-right: 18px;
   text-decoration: none;
+  color: #cfe4ff;
   font-weight: 500;
-  color: var(--text-primary);
-  transition: 0.3s ease;
 }
 
 .navbar a:hover {
-  color: var(--accent);
+  color: white;
 }
 
-.active {
-  color: var(--accent);
-}
-
-/* Theme toggle button */
+/* Theme button */
 .theme-btn {
-  padding: 6px 12px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Login/Logout buttons */
+.auth-btn {
+  padding: 6px 14px;
+  background: #000;
+  color: white;
   border: none;
   border-radius: 6px;
-  background: var(--accent);
-  color: white;
   cursor: pointer;
-  font-size: 14px;
-  margin-right: 12px;
-  transition: 0.3s ease;
-}
-
-.theme-btn:hover {
-  opacity: 0.85;
-}
-
-/* Logout button */
-.logout-btn {
-  padding: 6px 12px;
-  border: none;
-  border-radius: 6px;
-  background: #d9534f;
-  color: white;
-  cursor: pointer;
-  font-size: 14px;
-  margin-left: 12px;
-  transition: 0.3s;
-}
-
-.logout-btn:hover {
-  background: #c9302c;
-}
-
-/* Welcome text */
-.welcome-text {
-  color: var(--text-secondary);
-  margin-right: 8px;
-  font-size: 14px;
-}
-
-/* Responsive layout */
-@media (max-width: 768px) {
-  .navbar {
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .theme-btn,
-  .logout-btn {
-    font-size: 13px;
-    padding: 5px 10px;
-  }
-
-  .navbar a {
-    font-size: 14px;
-  }
 }
