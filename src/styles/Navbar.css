@@ -1,52 +1,89 @@
-/* FULL-WIDTH NAVBAR WITH EVEN SPACING FOR 2 ITEMS */
 .navbar {
-  background-color: #003366; /* Always Blue */
-  width: 100%;
   display: flex;
-  justify-content: space-between; /* Spread items across width */
   align-items: center;
-  padding: 0.8rem 1rem;
-  gap: 1rem;
+  justify-content: space-between;
+  background: var(--bg-secondary);
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-/* Allow both items to stretch evenly */
-.navbar > * {
-  flex: 1;
-  text-align: center;
-}
-
-/* Contact link styling */
+/* Left side links */
 .navbar a {
-  color: white;
-  font-weight: 600;
-  font-size: 1rem;
+  margin-right: 18px;
   text-decoration: none;
-  padding: 0.4rem 0.6rem;
-  border-radius: 6px;
-  transition: 0.25s;
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: 0.3s ease;
 }
 
 .navbar a:hover {
-  background-color: rgba(255, 255, 255, 0.25);
+  color: var(--accent);
 }
 
-.navbar a.active {
-  background-color: rgba(255, 255, 255, 0.4);
-  font-weight: bold;
+.active {
+  color: var(--accent);
 }
 
-/* Theme Toggle Button styled as nav item */
+/* Theme toggle button */
 .theme-btn {
-  background-color: #ffcc00;
-  color: #003366;
+  padding: 6px 12px;
   border: none;
-  padding: 0.45rem 0.9rem;
-  border-radius: 8px;
+  border-radius: 6px;
+  background: var(--accent);
+  color: white;
   cursor: pointer;
-  font-weight: 600;
-  transition: 0.25s;
+  font-size: 14px;
+  margin-right: 12px;
+  transition: 0.3s ease;
 }
 
 .theme-btn:hover {
-  background-color: #ffdb4d;
+  opacity: 0.85;
+}
+
+/* Logout button */
+.logout-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #d9534f;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 12px;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: #c9302c;
+}
+
+/* Welcome text */
+.welcome-text {
+  color: var(--text-secondary);
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .theme-btn,
+  .logout-btn {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+
+  .navbar a {
+    font-size: 14px;
+  }
 }
