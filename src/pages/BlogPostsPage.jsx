@@ -3,12 +3,16 @@ import { Link } from "react-router-dom";
 import "../styles/BlogPostsPage.css";
 
 export default function BlogPostsPage() {
-  const [posts, setPosts] = useState([]);     
-  const [loading, setLoading] = useState(true); 
-  const [error, setError] = useState("");      
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  // Reliable proxy + API (works on Vercel + Netlify)
+  const PROXY = "https://corsproxy.io/?";
+  const API = "https://jsonplaceholder.typicode.com/posts";
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
+    fetch(`${PROXY}${API}`)
       .then((response) => response.json())
       .then((data) => {
         setPosts(data);
