@@ -1,26 +1,28 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/BlogPostsPage.css";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import "../styles/BlogPostsPage.css";
 
 export default function BlogPostsPage() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  // Reliable proxy + API (works on Vercel + Netlify)
   const PROXY = "https://corsproxy.io/?";
   const API = "https://jsonplaceholder.typicode.com/posts";
 
   useEffect(() => {
     fetch(`${PROXY}${API}`)
-      .then((response) => response.json())
+      .then((res) => res.json())
       .then((data) => {
         setPosts(data);
         setLoading(false);
       })
-      .catch((error) => {
-        console.error("Error fetching posts:", error);
-        setError("Failed to fetch posts. Please try again later.");
+      .catch((err) => {
+        console.error(err);
+        setError("Failed to load posts.");
         setLoading(false);
       });
   }, []);
@@ -38,8 +40,8 @@ export default function BlogPostsPage() {
               <Link to={`/post/${post.id}`}>{post.title}</Link>
             </h3>
             <p>
-              {post.body.length > 150
-                ? post.body.slice(0, 150) + "..."
+              {post.body.length > 150 
+                ? post.body.slice(0, 150) + "..." 
                 : post.body}
             </p>
             <Link to={`/post/${post.id}`} className="read-more">
