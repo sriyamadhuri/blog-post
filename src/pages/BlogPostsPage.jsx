@@ -7,43 +7,21 @@ export default function BlogPostsPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
+  // No proxy needed — your CORS error was caused by crash, not CORS
   const API = "https://jsonplaceholder.typicode.com/posts";
 
   useEffect(() => {
-    async function loadPosts() {
-      try {
-        const res = await fetch(API, {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-
-        if (!res.ok) {
-          throw new Error("Failed to fetch posts");
-        }
-
-        const data = await res.json();
+    fetch(API)
+      .then((res) => res.json())
+      .then((data) => {
         setPosts(data);
         setLoading(false);
-      } catch (err) {
-        console.error("Error loading posts:", err);
-
-        // TRY AGAIN using backup CORS proxy
-        try {
-          const backup = await fetch(
-            `https://api.allorigins.win/raw?url=${encodeURIComponent(API)}`
-          );
-          const backupData = await backup.json();
-          setPosts(backupData);
-        } catch (e) {
-          setError("Unable to load posts. Try again later.");
-        }
-
+      })
+      .catch((err) => {
+        console.error("Error fetching posts:", err);
+        setError("Failed to load posts. Try again later.");
         setLoading(false);
-      }
-    }
-
-    loadPosts();
+      });
   }, []);
 
   if (loading) return <p>Loading posts...</p>;
@@ -61,7 +39,9 @@ export default function BlogPostsPage() {
             </h3>
 
             <p>
-              {post.body.length > 150 ? post.body.slice(0, 150) + "..." : post.body}
+              {post.body.length > 150
+                ? post.body.slice(0, 150) + "..."
+                : post.body}
             </p>
 
             <Link to={`/post/${post.id}`} className="read-more">

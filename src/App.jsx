@@ -8,8 +8,8 @@ import LoginPage from "./pages/LoginPage";
 import BlogPostsPage from "./pages/BlogPostsPage";
 import IndividualPostPage from "./pages/IndividualPostPage";
 import ContactPage from "./pages/ContactPage";
-import { AuthProvider } from "./context/authContext.jsx";
 
+import { useAuth } from "./context/authContext"; 
 import "./styles/App.css";
 
 function ProtectedRoute({ children }) {
@@ -25,13 +25,10 @@ function App() {
 
       <main className="main-content">
         <Routes>
-          {/* NEW: Landing Page */}
           <Route path="/" element={<HomePage />} />
 
-          {/* NEW: Login Page */}
           <Route path="/login" element={<LoginPage />} />
 
-          {/* Protected: Posts List */}
           <Route
             path="/posts"
             element={
@@ -41,10 +38,8 @@ function App() {
             }
           />
 
-          {/* Single Post */}
           <Route path="/post/:id" element={<IndividualPostPage />} />
 
-          {/* Contact */}
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </main>
